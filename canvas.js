@@ -86,3 +86,6 @@ function rdmColor() {
     var a = Math.random();
     return "'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'";
 }
+
+
+//hi doug
