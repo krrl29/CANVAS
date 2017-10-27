@@ -56,11 +56,11 @@ function drawRect() {
     //loop to draw boxes n times
     for (i = 0; i < n, i++;) {
         //randomize size
-        var x = Math.floor(Math.random() * (cvsWidth - 10));
-        var y = Math.floor(Math.random() * (cvsHeight - 10));
+        var x = Math.random() * (cvsWidth - 10);
+        var y = Math.random() * (cvsHeight - 10);
         //random location on canvas (x,y)
-        var w = Math.floor(Math.random() * (cvsWidth / 4));
-        var h = Math.floor(Math.random() * (cvsHeight / 4));
+        var w = Math.random() * (cvsWidth / 4);
+        var h = Math.random() * (cvsHeight / 4);
         //randomize color and opacity
         cvsRect.fillStyle = rdmColor();
         //create rectangle

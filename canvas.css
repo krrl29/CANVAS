@@ -13,9 +13,10 @@
 
 
 canvas{
-    width: 400px;
-    height: 400px;
-    background-color: #EEEEEE
+    /* width: 400px;
+    height: 400px; */
+    background-color: #EEEEEE;
+    border-bottom: 2px black solid;
 }
 
 .left{
