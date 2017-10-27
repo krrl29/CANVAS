@@ -54,7 +54,7 @@ function drawRect() {
     //var cvsWidth = $("cvsRect").width;
     //var cvsHeight = $("cvsRect").height;
     //loop to draw boxes n times
-    for (i = 0; i < n, i++;) {
+    for (i = 0; i < 5, i++;) {
         //randomize size
         var x = Math.random() * 70//(cvsWidth - 10);
         var y = Math.random() * 70//(cvsHeight - 10);
