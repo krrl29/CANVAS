@@ -10,11 +10,11 @@ window.onload = function () {
     //ref to drawRect
     //$("cvsRect").addEventListener("click", drawRect());
     //listeners for button events
-
+    $("btnRect").onclick = drawRect();
 
     //test
-    cvsRect.beginPath();
-    cvsRect.fillRect(20,20,30,20);
+    //cvsRect.beginPath();
+    //cvsRect.fillRect(20,20,30,20);
 }
 //canvas setup
 function canvasSetup() {
@@ -51,16 +51,16 @@ function drawRect() {
     //prompt user to enter a number and store n
     var n = $("txtRect");
     //grab size of canvas for location and size calculations
-    var cvsWidth = $("cvsRect").width;
-    var cvsHeight = $("cvsRect").height;
+    //var cvsWidth = $("cvsRect").width;
+    //var cvsHeight = $("cvsRect").height;
     //loop to draw boxes n times
     for (i = 0; i < n, i++;) {
         //randomize size
-        var x = Math.random() * (cvsWidth - 10);
-        var y = Math.random() * (cvsHeight - 10);
+        var x = Math.random() * 70//(cvsWidth - 10);
+        var y = Math.random() * 70//(cvsHeight - 10);
         //random location on canvas (x,y)
-        var w = Math.random() * (cvsWidth / 4);
-        var h = Math.random() * (cvsHeight / 4);
+        var w = Math.random() * 70//(cvsWidth / 4);
+        var h = Math.random() * 70//(cvsHeight / 4);
         //randomize color and opacity
         cvsRect.fillStyle = rdmColor();
         //create rectangle
