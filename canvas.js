@@ -10,7 +10,7 @@ window.onload = function () {
     //ref to drawRect
     //$("cvsRect").addEventListener("click", drawRect());
     //listeners for button events
-    $("btnRect").onclick = drawRect();
+    $("btnRect").addEventListener("click", drawRect());//.onclick = drawRect();
 
     //test
     //cvsRect.beginPath();
@@ -18,8 +18,8 @@ window.onload = function () {
 }
 //canvas setup
 function canvasSetup() {
-    cvsCirc = $("cvsCirc").getContext("2d");
-    cvsRect = $("cvsRect").getContext("2d");
+    cvsCirc = $("cvsCirc");
+    cvsRect = $("cvsRect");
 }
 //id function
 function $(id) {
@@ -28,9 +28,9 @@ function $(id) {
 //function that draws circles
 function drawCirc() {
     //use context of the canvas
-    cvsCirc.beginPath();
+    ctxCirc.beginPath();
     //prompt user to enter a number and store n
-    var n = $("txtCirc");
+    var n = $("txtCirc").value;
     //loop to draw circles n times
     for (i = 0; i < n, i++;) {
         //randomize size r- radius
@@ -39,32 +39,39 @@ function drawCirc() {
 
 
         //randomize color and opacity
-        cvsCirc.fillStyle = rdmColor();
+        ctxCirc.fillStyle = rdmColor();
 
 
     }
 }
 //function that draws rectangles
 function drawRect() {
-    //use context of the canvas
-    cvsRect.beginPath();
+    
+    var ctxRect = cvsRect.getContext("2d");//set up drawing context    
     //prompt user to enter a number and store n
-    var n = $("txtRect");
+    var n = $("txtRect").value;
     //grab size of canvas for location and size calculations
     //var cvsWidth = $("cvsRect").width;
     //var cvsHeight = $("cvsRect").height;
     //loop to draw boxes n times
     for (i = 0; i < 5, i++;) {
         //randomize size
-        var x = Math.random() * 70//(cvsWidth - 10);
-        var y = Math.random() * 70//(cvsHeight - 10);
+        var x = Math.random() * .7//(cvsWidth - 10);
+        var y = Math.random() * .7//(cvsHeight - 10);
         //random location on canvas (x,y)
-        var w = Math.random() * 70//(cvsWidth / 4);
-        var h = Math.random() * 70//(cvsHeight / 4);
+        var w = Math.random() * .7//(cvsWidth / 4);
+        var h = Math.random() * .7//(cvsHeight / 4);
         //randomize color and opacity
-        cvsRect.fillStyle = rdmColor();
+        //ctxRect.fillStyle = rdmColor();
+        var r = Math.floor(Math.random() * 256); // 0-255
+        var g = Math.floor(Math.random() * 256); // 0-255
+        var b = Math.floor(Math.random() * 256); // 0-255
+        var a = Math.random() + .2;
         //create rectangle
-        cvsRect.fillRect(x, y, w, h);
+        ctxRect.beginPath();
+        ctxRect.Rect(x, y, w, h);
+        ctxRext.Stroke();
+        ctxRect.fillStyle ='rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
 
     }
 
@@ -88,4 +95,4 @@ function rdmColor() {
 }
 
 
-//hi doug
+
