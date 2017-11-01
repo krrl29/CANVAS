@@ -85,15 +85,32 @@ function drawRect() {
         ctxRect.fill();
 
     }
-
-
 }
+
 //function that clears circle canvas
 function clearCirc() {
+    //set up drawing context    
+    var ctxCirc = cvsCirc.getContext("2d");
+
+    //grab size of canvas for location and size calculations
+    var cvsWidth = $("cvsCirc").width;
+    var cvsHeight = $("cvsCirc").height;
+    
+    //clear contents according to size of canvas
+    ctxCirc.clearRect(0,0,cvsWidth,cvsHeight);
 
 }
 //function that clears rectangle canvas
 function clearRect() {
+    //set up drawing context    
+    var ctxRect = cvsRect.getContext("2d");
+    
+    //grab size of canvas for location and size calculations
+    var cvsWidth = $("cvsRect").width;
+    var cvsHeight = $("cvsRect").height;
+    
+    //clear contents according to size of canvas
+    ctxRect.clearRect(0,0,cvsWidth,cvsHeight);
 
 }
 
